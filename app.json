@@ -1,0 +1,62 @@
+{
+  "name": "Telegram Booking Bot",
+  "description": "Бот для записи к косметологу, позволяющий клиентам записываться на процедуры и получать напоминания",
+  "repository": "https://github.com/kmvit/booking-bot",
+  "keywords": ["python", "telegram", "bot", "booking"],
+  "env": {
+    "BOT_TOKEN": {
+      "description": "Токен бота Telegram, полученный у @BotFather",
+      "required": true
+    },
+    "ADMIN_IDS": {
+      "description": "ID администраторов через запятую",
+      "required": true
+    },
+    "DATABASE_URL": {
+      "description": "URL базы данных (Heroku PostgreSQL, добавляется автоматически при подключении аддона)",
+      "required": true
+    },
+    "WEBHOOK_MODE": {
+      "description": "Режим работы бота (True для webhook на Heroku)",
+      "value": "True"
+    },
+    "WEBHOOK_HOST": {
+      "description": "URL вашего приложения Heroku (например, https://your-app.herokuapp.com)",
+      "required": true
+    },
+    "TIMEZONE": {
+      "description": "Часовой пояс",
+      "value": "Europe/Moscow"
+    },
+    "WORK_START": {
+      "description": "Время начала рабочего дня",
+      "value": "09:00"
+    },
+    "WORK_END": {
+      "description": "Время окончания рабочего дня",
+      "value": "20:00"
+    },
+    "SLOT_DURATION": {
+      "description": "Продолжительность слота в минутах",
+      "value": "60"
+    },
+    "REMINDER_BEFORE_DAY": {
+      "description": "Время отправки напоминания за день до процедуры",
+      "value": "10:00"
+    },
+    "REMINDER_DAY_OF": {
+      "description": "Время отправки напоминания в день процедуры",
+      "value": "08:00"
+    }
+  },
+  "addons": [
+    {
+      "plan": "heroku-postgresql:hobby-dev"
+    }
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ]
+} 
