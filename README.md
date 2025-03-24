@@ -86,7 +86,7 @@ bot/
 - Heroku
 - Railway
 - VPS (например, DigitalOcean, VK Cloud)
-
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/kmvit/booking-bot)
 ## Лицензия
 
 MIT 
